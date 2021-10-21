@@ -3,7 +3,7 @@ import styled from 'styled-components/macro';
 
 import { FaInstagram, FaFacebook, FaTwitter } from 'react-icons/fa';
 
-export function Footer(): ReactElement {
+const Footer = (): ReactElement => {
   return (
     <FooterWrapper>
       <FooterContent>
@@ -29,7 +29,7 @@ export function Footer(): ReactElement {
       </Copyright>
     </FooterWrapper>
   );
-}
+};
 
 const FooterLinks = styled.ul`
   display: -webkit-flex;
@@ -100,3 +100,5 @@ const FooterWrapper = styled.footer`
   padding: 20px 0;
   color: #f4f4f4;
 `;
+
+export default Footer;

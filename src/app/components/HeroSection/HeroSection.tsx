@@ -8,12 +8,12 @@ type HeroProps = WithChildren<{
   backgroundImage?: string;
 }>;
 
-export function Hero({
+const HeroSection = ({
   title,
   paragraph,
   backgroundImage,
   children,
-}: HeroProps) {
+}: HeroProps) => {
   return (
     <HeroWrapper>
       <HeroSeparator />
@@ -25,7 +25,7 @@ export function Hero({
       ) : null}
     </HeroWrapper>
   );
-}
+};
 
 const HeroSeparator = styled.hr`
   content: '';
@@ -77,3 +77,5 @@ const HeroWrapper = styled.section`
     padding: 0 10%;
   }
 `;
+
+export default HeroSection;

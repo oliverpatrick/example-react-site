@@ -1,13 +1,13 @@
 import styled from 'styled-components/macro';
 
 import coffeeOne from '../../assets/images/coffee1.jpg';
-import { Button } from '../Button';
+import Button from '../Button/Button';
 
 interface LocationProps {
   right: boolean;
 }
 
-export function Location({ right }: LocationProps) {
+const Location = ({ right }: LocationProps) => {
   return (
     <LocationWrapper>
       {right ? (
@@ -55,7 +55,7 @@ export function Location({ right }: LocationProps) {
       )}
     </LocationWrapper>
   );
-}
+};
 
 const LocationWrapper = styled.div`
   display: -webkit-flex;
@@ -98,3 +98,5 @@ const AddressWrapper = styled.div`
     text-decoration: none;
   }
 `;
+
+export default Location;

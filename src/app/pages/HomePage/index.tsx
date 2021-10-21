@@ -1,9 +1,9 @@
 import { Helmet } from 'react-helmet-async';
 
-import { Hero } from 'app/components/HeroSection';
-import { Button } from 'app/components/Button';
-import { Location } from 'app/components/Location';
-import { ImageCarousel } from 'app/components/Carousel';
+import HeroSection from 'app/components/HeroSection/HeroSection';
+import Button from 'app/components/Button/Button';
+import Location from 'app/components/Location/Location';
+import ImageCarousel from 'app/components/Carousel/Carousel';
 
 import coffeeImage from '../../assets/images/coffee1.jpg';
 
@@ -16,7 +16,7 @@ export function HomePage() {
       </Helmet>
 
       <ImageCarousel />
-      <Hero title="Our Menu">
+      <HeroSection title="Our Menu">
         <h2>Food One</h2>
         <h4>
           Duis tellus nisl, faucibus et purus eu, tempus pellentesque eros. In
@@ -46,9 +46,9 @@ export function HomePage() {
           Duis tellus nisl, faucibus et purus eu, tempus pellentesque eros. In
           dui erat, gravida suscipit ipsum ac, cursus placerat tellus.
         </h4>
-      </Hero>
+      </HeroSection>
       <Location right={false} />
-      <Hero
+      <HeroSection
         title="Lorem ipsum dolor sit amet"
         paragraph="Nulla viverra fermentum ante in rhoncus. Vestibulum sit amet
         nulla ac ante ullamcorper commodo. Nullam porttitor, tellus non luctus
@@ -59,7 +59,7 @@ export function HomePage() {
         backgroundImage={coffeeImage}
       >
         <Button text="Button"></Button>
-      </Hero>
+      </HeroSection>
     </>
   );
 }

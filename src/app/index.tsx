@@ -16,8 +16,8 @@ import { HomePage } from './pages/HomePage/Loadable';
 import { NotFoundPage } from './pages/NotFoundPage/Loadable';
 import { useTranslation } from 'react-i18next';
 
-import Navbar from './components/Navbar';
-import { Footer } from './components/Footer';
+import Navbar from './components/Navbar/Navbar';
+import Footer from './components/Footer/Footer';
 import styled from 'styled-components/macro';
 import { AboutPage } from './pages/AboutPage/Loadable';
 import { ContactPage } from './pages/ContactPage/loadable';

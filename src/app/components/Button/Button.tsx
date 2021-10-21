@@ -4,7 +4,7 @@ interface ButtonProps {
   text: string;
 }
 
-export const Button = ({ text }: ButtonProps) => {
+const Button = ({ text }: ButtonProps) => {
   return <ButtonWrapper>{text}</ButtonWrapper>;
 };
 
@@ -20,3 +20,5 @@ const ButtonWrapper = styled.button`
   transition: outline 0.1s linear;
   border: none;
 `;
+
+export default Button;

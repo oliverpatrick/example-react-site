@@ -6,7 +6,7 @@ import coffeeOne from '../../assets/images/coffee1.jpg';
 import coffeeTwo from '../../assets/images/coffee2.jpg';
 import coffeeThree from '../../assets/images/coffee3.jpg';
 
-export function ImageCarousel() {
+const ImageCarousel = () => {
   return (
     <CarouselWrapper>
       <Carousel
@@ -29,7 +29,7 @@ export function ImageCarousel() {
       </Carousel>
     </CarouselWrapper>
   );
-}
+};
 
 const CarouselWrapper = styled.div`
   width: 100%;
@@ -39,3 +39,5 @@ const Image = styled.img`
   height: auto;
   max-width: 100%;
 `;
+
+export default ImageCarousel;
