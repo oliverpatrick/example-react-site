@@ -38,8 +38,8 @@ export function App() {
       <Layout>
         <Switch>
           <Route exact path="/" component={HomePage} />
-          <Route exact path="/about" component={AboutPage} />
-          <Route exact path="/contact" component={ContactPage} />
+          <Route path="/about" component={AboutPage} />
+          <Route path="/contact" component={ContactPage} />
           {/* <Route component={NotFoundPage} /> */}
         </Switch>
       </Layout>
