@@ -38,7 +38,7 @@ export function App() {
       <Navbar />
       <Layout>
         <Switch>
-          <Route exact path="/" component={HomePage} />
+          <Route exact path="/example-react-site" component={HomePage} />
           <Route path="/example-react-site/about" component={AboutPage} />
           <Route path="/example-react-site/contact" component={ContactPage} />
           <Route component={NotFoundPage} />
