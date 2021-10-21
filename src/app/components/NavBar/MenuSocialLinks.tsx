@@ -19,6 +19,7 @@ export const MenuSocialLink = styled.a<IMenuProps>`
     font-size: 0.75rem;
     transition: all 0.3s ease-in;
     position: relative;
+    z-index: 2;
 
     &:after {
       content: '';

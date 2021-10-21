@@ -14,5 +14,6 @@ export const Menu = styled.div<IMenuProps>`
     transition: max-height 0.3s ease-in;
     width: 100%;
     background-color: #dadada;
+    z-index: 2;
   }
 `;

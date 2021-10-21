@@ -11,6 +11,7 @@ export const MenuLink = styled(Link)<IMenuProps>`
   transition: all 0.3s ease-in;
   font-size: 1rem;
   position: relative;
+  z-index: 10;
 
   &:hover {
     color: #a8a8a8;
