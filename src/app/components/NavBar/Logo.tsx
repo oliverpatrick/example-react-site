@@ -1,29 +1,15 @@
-import * as React from 'react';
 import styled from 'styled-components/macro';
+import { IMenuProps } from './IMenuProps';
 
-export function Logo() {
-  return (
-    <Wrapper>
-      <Title>React Boilerplate</Title>
-      <Description>Create React App Template</Description>
-    </Wrapper>
-  );
-}
+export const Logo = styled.a<IMenuProps>`
+  padding: 1rem;
+  color: ${({ isOpen }) => (isOpen ? '#202020' : '#dadada')};
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 1.7rem;
 
-const Wrapper = styled.div`
-  display: flex;
-  align-items: center;
-`;
-
-const Title = styled.div`
-  font-size: 1.25rem;
-  color: ${p => p.theme.text};
-  font-weight: bold;
-  margin-right: 1rem;
-`;
-
-const Description = styled.div`
-  font-size: 0.875rem;
-  color: ${p => p.theme.textSecondary};
-  font-weight: normal;
+  span {
+    font-weight: 300;
+    font-size: 1.3rem;
+  }
 `;

@@ -1,43 +1,75 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components/macro';
+
+import { FaBars, FaTimes } from 'react-icons/fa';
+
+import { Hamburger } from './Hamburger';
+import { Menu } from './Menu';
+import { MenuLink } from './MenuLink';
 import { Logo } from './Logo';
-import { StyleConstants } from 'styles/StyleConstants';
-import { Nav } from './Nav';
-import { PageWrapper } from '../PageWrapper';
+import { MenuSocialLink } from './MenuSocialLinks';
+import { IMenuProps } from './IMenuProps';
 
-export function NavBar() {
+const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  function handleHamburgerMenu() {
+    setIsOpen(!isOpen);
+  }
+
   return (
-    <Wrapper>
-      <PageWrapper>
-        <Logo />
-        <Nav />
-      </PageWrapper>
-    </Wrapper>
+    <Nav isOpen={isOpen}>
+      <Logo isOpen={isOpen} href="">
+        Example<span>Website</span>
+      </Logo>
+      {isOpen ? (
+        <Hamburger isOpen={isOpen}>
+          <FaTimes onClick={handleHamburgerMenu} />
+        </Hamburger>
+      ) : (
+        <Hamburger isOpen={isOpen}>
+          <FaBars onClick={handleHamburgerMenu} />
+        </Hamburger>
+      )}
+      <Menu isOpen={isOpen}>
+        <MenuLink isOpen={isOpen} to="/">
+          Home
+        </MenuLink>
+        <MenuLink isOpen={isOpen} to="/events">
+          Events
+        </MenuLink>
+        <MenuLink isOpen={isOpen} to="/about">
+          About
+        </MenuLink>
+        <MenuLink isOpen={isOpen} to="/contact">
+          Contact
+        </MenuLink>
+        <MenuSocialLink isOpen={isOpen} href="">
+          Facebook
+        </MenuSocialLink>
+        <MenuSocialLink isOpen={isOpen} href="">
+          Twitter
+        </MenuSocialLink>
+        <MenuSocialLink isOpen={isOpen} href="">
+          Instagram
+        </MenuSocialLink>
+      </Menu>
+    </Nav>
   );
-}
+};
 
-const Wrapper = styled.header`
-  box-shadow: 0 1px 0 0 ${p => p.theme.borderLight};
-  height: ${StyleConstants.NAV_BAR_HEIGHT};
+export default Navbar;
+
+const Nav = styled.div<IMenuProps>`
   display: flex;
-  position: fixed;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background: ${({ isOpen }) => (isOpen ? '#dadada' : '#202020')};
+  position: absolute;
   top: 0;
-  width: 100%;
-  background-color: ${p => p.theme.background};
-  z-index: 2;
-
-  @supports (backdrop-filter: blur(10px)) {
-    backdrop-filter: blur(10px);
-    background-color: ${p =>
-      p.theme.background.replace(
-        /rgba?(\(\s*\d+\s*,\s*\d+\s*,\s*\d+)(?:\s*,.+?)?\)/,
-        'rgba$1,0.75)',
-      )};
-  }
-
-  ${PageWrapper} {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+  left: 0;
+  right: 0;
+  transition: color 2s ease-in;
+  height: 4.5rem;
 `;

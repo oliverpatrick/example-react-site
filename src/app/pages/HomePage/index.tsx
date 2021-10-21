@@ -1,25 +1,61 @@
-import * as React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { NavBar } from 'app/components/NavBar';
-import { Masthead } from './Masthead';
-import { Features } from './Features';
-import { PageWrapper } from 'app/components/PageWrapper';
+
+import { Hero } from 'app/components/HeroSection';
+import { Button } from 'app/components/Button';
+
+import coffeeImage from '../../assets/images/coffee1.jpg';
 
 export function HomePage() {
   return (
     <>
       <Helmet>
-        <title>Home Page</title>
-        <meta
-          name="description"
-          content="A React Boilerplate application homepage"
-        />
+        <title>Home</title>
+        <meta name="description" content="A Boilerplate application homepage" />
       </Helmet>
-      <NavBar />
-      <PageWrapper>
-        <Masthead />
-        <Features />
-      </PageWrapper>
+
+      <Hero title="Our Menu">
+        <h2>Food One</h2>
+        <h4>
+          Duis tellus nisl, faucibus et purus eu, tempus pellentesque eros. In
+          dui erat, gravida suscipit ipsum ac, cursus placerat tellus.
+        </h4>
+
+        <h2>Food Two</h2>
+        <h4>
+          Duis tellus nisl, faucibus et purus eu, tempus pellentesque eros. In
+          dui erat, gravida suscipit ipsum ac, cursus placerat tellus.
+        </h4>
+
+        <h2>Food Three</h2>
+        <h4>
+          Duis tellus nisl, faucibus et purus eu, tempus pellentesque eros. In
+          dui erat, gravida suscipit ipsum ac, cursus placerat tellus.
+        </h4>
+
+        <h2>Food Four</h2>
+        <h4>
+          Duis tellus nisl, faucibus et purus eu, tempus pellentesque eros. In
+          dui erat, gravida suscipit ipsum ac, cursus placerat tellus.
+        </h4>
+
+        <h2>Food Five</h2>
+        <h4>
+          Duis tellus nisl, faucibus et purus eu, tempus pellentesque eros. In
+          dui erat, gravida suscipit ipsum ac, cursus placerat tellus.
+        </h4>
+      </Hero>
+      <Hero
+        title="Lorem ipsum dolor sit amet"
+        paragraph="Nulla viverra fermentum ante in rhoncus. Vestibulum sit amet
+        nulla ac ante ullamcorper commodo. Nullam porttitor, tellus non luctus
+        fermentum, sem diam auctor mi, sed sodales odio tellus quis dui. Morbi
+        ac nisl auctor, accumsan nisi quis, semper tellus. In ut tincidunt
+        dolor, et dapibus tortor. Sed mi tellus, condimentum sed tempus et,
+        porta iaculis est."
+        backgroundImage={coffeeImage}
+      >
+        <Button text="Button"></Button>
+      </Hero>
     </>
   );
 }
