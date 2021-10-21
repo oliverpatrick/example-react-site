@@ -32,25 +32,41 @@ export const Navbar = () => {
         </Hamburger>
       )}
       <Menu isOpen={isOpen}>
-        <MenuLink isOpen={isOpen} to="/example-react-site">
+        <MenuLink
+          isOpen={isOpen}
+          onClick={handleHamburgerMenu}
+          to="/example-react-site"
+        >
           Home
         </MenuLink>
-        <MenuLink isOpen={isOpen} to="/example-react-site/events">
+        <MenuLink
+          isOpen={isOpen}
+          onClick={handleHamburgerMenu}
+          to="/example-react-site/events"
+        >
           Events
         </MenuLink>
-        <MenuLink isOpen={isOpen} to="/example-react-site/about">
+        <MenuLink
+          isOpen={isOpen}
+          onClick={handleHamburgerMenu}
+          to="/example-react-site/about"
+        >
           About
         </MenuLink>
-        <MenuLink isOpen={isOpen} to="/example-react-site/contact">
+        <MenuLink
+          isOpen={isOpen}
+          onClick={handleHamburgerMenu}
+          to="/example-react-site/contact"
+        >
           Contact
         </MenuLink>
-        <MenuSocialLink isOpen={isOpen} href="">
+        <MenuSocialLink isOpen={isOpen} onClick={handleHamburgerMenu} href="">
           Facebook
         </MenuSocialLink>
-        <MenuSocialLink isOpen={isOpen} href="">
+        <MenuSocialLink isOpen={isOpen} onClick={handleHamburgerMenu} href="">
           Twitter
         </MenuSocialLink>
-        <MenuSocialLink isOpen={isOpen} href="">
+        <MenuSocialLink isOpen={isOpen} onClick={handleHamburgerMenu} href="">
           Instagram
         </MenuSocialLink>
       </Menu>
