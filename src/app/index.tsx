@@ -11,19 +11,20 @@ import { Helmet } from 'react-helmet-async';
 import { Switch, Route, BrowserRouter } from 'react-router-dom';
 
 import { GlobalStyle } from 'styles/global-styles';
+import styled from 'styled-components/macro';
 
 import { HomePage } from './pages/HomePage/Loadable';
 import { NotFoundPage } from './pages/NotFoundPage/Loadable';
 import { useTranslation } from 'react-i18next';
 
-import Navbar from './components/Navbar/Navbar';
-import Footer from './components/Footer/Footer';
-import styled from 'styled-components/macro';
+import { Navbar } from './components/Navbar/Navbar';
+import { Footer } from './components/Footer/Footer';
 import { AboutPage } from './pages/AboutPage/Loadable';
 import { ContactPage } from './pages/ContactPage/loadable';
 
 export function App() {
   const { i18n } = useTranslation();
+
   return (
     <BrowserRouter>
       <Helmet

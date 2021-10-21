@@ -10,7 +10,7 @@ import { Logo } from './Logo';
 import { MenuSocialLink } from './MenuSocialLinks';
 import { IMenuProps } from './IMenuProps';
 
-const Navbar = () => {
+export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   function handleHamburgerMenu() {
@@ -57,8 +57,6 @@ const Navbar = () => {
     </Nav>
   );
 };
-
-export default Navbar;
 
 const Nav = styled.div<IMenuProps>`
   display: flex;
