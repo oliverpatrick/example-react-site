@@ -13,7 +13,7 @@ import { Switch, Route, BrowserRouter } from 'react-router-dom';
 import { GlobalStyle } from 'styles/global-styles';
 
 import { HomePage } from './pages/HomePage/Loadable';
-// import { NotFoundPage } from './pages/NotFoundPage/Loadable';
+import { NotFoundPage } from './pages/NotFoundPage/Loadable';
 import { useTranslation } from 'react-i18next';
 
 import Navbar from './components/Navbar';
@@ -37,10 +37,10 @@ export function App() {
       <Navbar />
       <Layout>
         <Switch>
-          <Route exact path="/" component={HomePage} />
-          <Route path="/about" component={AboutPage} />
-          <Route path="/contact" component={ContactPage} />
-          {/* <Route component={NotFoundPage} /> */}
+          <Route exact path="/example-react-site" component={HomePage} />
+          <Route path="/example-react-site/about" component={AboutPage} />
+          <Route path="/example-react-site/contact" component={ContactPage} />
+          <Route component={NotFoundPage} />
         </Switch>
       </Layout>
       <Footer />
