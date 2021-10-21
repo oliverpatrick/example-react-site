@@ -19,6 +19,8 @@ import { useTranslation } from 'react-i18next';
 import Navbar from './components/Navbar';
 import { Footer } from './components/Footer';
 import styled from 'styled-components/macro';
+import { AboutPage } from './pages/AboutPage/Loadable';
+import { ContactPage } from './pages/ContactPage/loadable';
 
 export function App() {
   const { i18n } = useTranslation();
@@ -36,6 +38,8 @@ export function App() {
       <Layout>
         <Switch>
           <Route exact path="/" component={HomePage} />
+          <Route exact path="/about" component={AboutPage} />
+          <Route exact path="/contact" component={ContactPage} />
           <Route component={NotFoundPage} />
         </Switch>
       </Layout>
